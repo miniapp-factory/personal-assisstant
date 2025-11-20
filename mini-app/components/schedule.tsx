@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Button } from "./ui/button";
 import {
   AlertDialog,
@@ -11,6 +11,7 @@ import {
   AlertDialogDescription,
   AlertDialogAction,
   AlertDialogCancel,
+  AlertDialogFooter,
 } from "./ui/alert-dialog";
 
 interface Task {
@@ -142,7 +143,7 @@ export default function Schedule() {
             <AlertDialogHeader>
               <AlertDialogTitle>Reschedule Task</AlertDialogTitle>
               <AlertDialogDescription>
-                Change the due time for "{rescheduleTask.title}"
+                Change the due time for `${rescheduleTask.title}`
               </AlertDialogDescription>
             </AlertDialogHeader>
             <div className="mt-4">
